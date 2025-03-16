@@ -32,7 +32,9 @@ dd if=./Desktop/flag2of2-final.pdf bs=1 count=914 of=extracted.png
 ```
 * open the png
 
+
 ![alt text](image-1.png)
+
 
 * we go the first part of the flag
 
