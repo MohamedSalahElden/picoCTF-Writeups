@@ -6,6 +6,7 @@ Download the suspicious file [here](https://artifacts.picoctf.net/c_titan/97/fla
 
 ## inspection 
 * openning the pdf we can find the 2nd half of the flag 
+
 ![alt text](image.png)
 
 * for the first half of the flag we need to inspect the pdf deeper using [binwalk](https://github.com/ReFirmLabs/binwalk)
@@ -30,9 +31,10 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 dd if=./Desktop/flag2of2-final.pdf bs=1 count=914 of=extracted.png
 ```
 * open the png
+
 ![alt text](image-1.png)
 
-we go the first part of the flag
+* we go the first part of the flag
 
  
 

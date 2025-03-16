@@ -1,4 +1,4 @@
-# Index of Extracted Files
+# Index 
 
 | **#** | **Filename** | 
 |---|------------|
