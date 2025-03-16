@@ -18,7 +18,7 @@
     
     
       
-        <title>Chapter 1: Introduction to Cryptography - picoCTF Writeups</title>
+        <title>Secret of the Polyglot - picoCTF Writeups</title>
       
     
     
@@ -60,7 +60,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#chapter-1-introduction-to-cryptography" class="md-skip">
+        <a href="#secret-of-the-polyglot" class="md-skip">
           Skip to content
         </a>
       
@@ -94,7 +94,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              Chapter 1: Introduction to Cryptography
+              Secret of the Polyglot
             
           </span>
         </div>
@@ -199,7 +199,7 @@
   
     
   
-  Chapter 1: Introduction to Cryptography
+  Secret of the Polyglot
 
       </a>
     </li>
@@ -290,16 +290,65 @@
         
       
       
+        <label class="md-nav__link md-nav__link--active" for="__toc">
+          
+  
+  <span class="md-ellipsis">
+    Secret of the Polyglot
+    
+  </span>
+  
+
+          <span class="md-nav__icon md-icon"></span>
+        </label>
+      
       <a href="./" class="md-nav__link md-nav__link--active">
         
   
   <span class="md-ellipsis">
-    Chapter 1: Introduction to Cryptography
+    Secret of the Polyglot
     
   </span>
   
 
       </a>
+      
+        
+
+<nav class="md-nav md-nav--secondary" aria-label="Table of contents">
+  
+  
+  
+    
+  
+  
+    <label class="md-nav__title" for="__toc">
+      <span class="md-nav__icon md-icon"></span>
+      Table of contents
+    </label>
+    <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#description" class="md-nav__link">
+    <span class="md-ellipsis">
+      Description
+    </span>
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
+  <a href="#inspection" class="md-nav__link">
+    <span class="md-ellipsis">
+      inspection
+    </span>
+  </a>
+  
+</li>
+      
+    </ul>
+  
+</nav>
       
     </li>
   
@@ -324,8 +373,43 @@
   
 
 
-<h1 id="chapter-1-introduction-to-cryptography">Chapter 1: Introduction to Cryptography</h1>
-<p>Cryptography is the practice of secure communication...</p>
+<h1 id="secret-of-the-polyglot">Secret of the Polyglot</h1>
+<h2 id="description">Description</h2>
+<p>The Network Operations Center (NOC) of your local institution picked up a suspicious file, they're getting conflicting information on what type of file it is. They've brought you in as an external expert to examine the file. Can you extract all the information from this strange file?
+Download the suspicious file <a href="https://artifacts.picoctf.net/c_titan/97/flag2of2-final.pdf">here</a>.</p>
+<h2 id="inspection">inspection</h2>
+<ul>
+<li>
+<p>openning the pdf we can find the 2nd half of the flag 
+<img alt="alt text" src="../image.png" /></p>
+</li>
+<li>
+<p>for the first half of the flag we need to inspect the pdf deeper using <a href="https://github.com/ReFirmLabs/binwalk">binwalk</a></p>
+</li>
+<li>install binwalk essetial libs <code>sudo apt install build-essential libfontconfig1-dev liblzma-dev</code></li>
+<li>install cargo <code>sudo apt install cargo</code></li>
+<li>install binwalk <code>cargo install binwalk</code></li>
+<li>run binwalk on the pdf file </li>
+</ul>
+<pre><code class="language-bash">binwalk ./Desktop/flag2of2-final.pdf
+
+DECIMAL       HEXADECIMAL     DESCRIPTION
+--------------------------------------------------------------------------------
+0             0x0             PNG image, 50 x 50, 8-bit/color RGBA, non-interlaced
+914           0x392           PDF document, version: &quot;1.4&quot;
+1149          0x47D           Zlib compressed data, default compression
+</code></pre>
+<ul>
+<li>the fild contains a PNG image starting from 0x0 to 0x914 (lets inspect this)</li>
+<li>extract the png to a file</li>
+</ul>
+<pre><code class="language-bash">dd if=./Desktop/flag2of2-final.pdf bs=1 count=914 of=extracted.png
+</code></pre>
+<ul>
+<li>open the png
+<img alt="alt text" src="../image-1.png" /></li>
+</ul>
+<p>we go the first part of the flag</p>
 
 
 
