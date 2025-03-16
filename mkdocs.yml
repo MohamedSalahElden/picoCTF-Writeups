@@ -1,0 +1,23 @@
+site_name: picoCTF Writeups
+theme:
+  name: material
+  features:
+    - navigation.tabs
+    - navigation.instant
+    - navigation.tracking
+    - navigation.expand
+    - toc.integrate
+    - content.code.annotate
+repo_url: "https://github.com/MohamedSalahElden/picoCTF_Writeups"
+edit_uri: "edit/main/docs/"
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/MohamedSalahElden
+# nav:
+#   - Home: index.md
+#   - Introduction: chapter1.md
+#   - Cryptographic Algorithms:
+#       - Symmetric: symmetric.md
+#       - Asymmetric: asymmetric.md
+#   - About: about.md
