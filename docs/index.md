@@ -1,17 +1,6 @@
-# Welcome to MkDocs
+# Index of Extracted Files
 
-For full documentation visit [mkdocs.org](https://www.mkdocs.org).
+| **#** | **Filename** | 
+|---|------------|
+| 1 | [Secret of the Polyglot](./Secret%20of%20the%20Polyglot.md) | 
 
-## Commands
-
-* `mkdocs new [dir-name]` - Create a new project.
-* `mkdocs serve` - Start the live-reloading docs server.
-* `mkdocs build` - Build the documentation site.
-* `mkdocs -h` - Print help message and exit.
-
-## Project layout
-
-    mkdocs.yml    # The configuration file.
-    docs/
-        index.md  # The documentation homepage.
-        ...       # Other markdown pages, images and other files.
