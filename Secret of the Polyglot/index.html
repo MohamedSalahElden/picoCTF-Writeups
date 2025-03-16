@@ -9,8 +9,10 @@
       
       
       
-        <link rel="prev" href="..">
+        <link rel="prev" href="../CanYouSee/">
       
+      
+        <link rel="next" href="../information/">
       
       
       <link rel="icon" href="../assets/images/favicon.png">
@@ -180,7 +182,24 @@
   
     
   
-  Index of Extracted Files
+  Index
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../CanYouSee/" class="md-tabs__link">
+        
+  
+    
+  
+  CanYouSee
 
       </a>
     </li>
@@ -200,6 +219,23 @@
     
   
   Secret of the Polyglot
+
+      </a>
+    </li>
+  
+
+      
+        
+  
+  
+  
+    <li class="md-tabs__item">
+      <a href="../information/" class="md-tabs__link">
+        
+  
+    
+  
+  information
 
       </a>
     </li>
@@ -264,7 +300,28 @@
         
   
   <span class="md-ellipsis">
-    Index of Extracted Files
+    Index
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../CanYouSee/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    CanYouSee
     
   </span>
   
@@ -354,6 +411,27 @@
   
 
     
+      
+      
+  
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../information/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    information
+    
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+    
   </ul>
 </nav>
                   </div>
@@ -379,13 +457,11 @@
 Download the suspicious file <a href="https://artifacts.picoctf.net/c_titan/97/flag2of2-final.pdf">here</a>.</p>
 <h2 id="inspection">inspection</h2>
 <ul>
-<li>
-<p>openning the pdf we can find the 2nd half of the flag 
-<img alt="alt text" src="../image.png" /></p>
-</li>
-<li>
-<p>for the first half of the flag we need to inspect the pdf deeper using <a href="https://github.com/ReFirmLabs/binwalk">binwalk</a></p>
-</li>
+<li>openning the pdf we can find the 2nd half of the flag </li>
+</ul>
+<p><img alt="alt text" src="../image.png" /></p>
+<ul>
+<li>for the first half of the flag we need to inspect the pdf deeper using <a href="https://github.com/ReFirmLabs/binwalk">binwalk</a></li>
 <li>install binwalk essetial libs <code>sudo apt install build-essential libfontconfig1-dev liblzma-dev</code></li>
 <li>install cargo <code>sudo apt install cargo</code></li>
 <li>install binwalk <code>cargo install binwalk</code></li>
@@ -406,10 +482,12 @@ DECIMAL       HEXADECIMAL     DESCRIPTION
 <pre><code class="language-bash">dd if=./Desktop/flag2of2-final.pdf bs=1 count=914 of=extracted.png
 </code></pre>
 <ul>
-<li>open the png
-<img alt="alt text" src="../image-1.png" /></li>
+<li>open the png</li>
 </ul>
-<p>we go the first part of the flag</p>
+<p><img alt="alt text" src="../image-1.png" /></p>
+<ul>
+<li>we go the first part of the flag</li>
+</ul>
 
 
 
